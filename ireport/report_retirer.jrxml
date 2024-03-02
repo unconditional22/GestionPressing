@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0fd52af7-f04c-4dd3-a04e-15e89312a486">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select r.*, LibelleA, Prenom from article a, client c, retirer r where a.IDA = r.IDA and c.ID_Client = r.ID_Client;]]>
+	</queryString>
+	<field name="id_retrait" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Date_retrait" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Qt_retrait" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="IDA" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ID_Client" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LibelleA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Prenom" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="79" uuid="ac3a3c12-6463-4215-9dd8-6ab0973deb6f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="116" y="12" width="344" height="53" uuid="0ecdef99-9fea-46b1-b0c1-64ff0782280c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Liste Des Ramassages]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="61" uuid="b933123a-11f0-4a6b-a8e4-ec79e1f1ab3d"/>
+			</rectangle>
+			<line>
+				<reportElement x="131" y="0" width="1" height="61" uuid="72d4af09-a786-4877-97aa-cc61e9d87664"/>
+			</line>
+			<line>
+				<reportElement x="273" y="0" width="1" height="61" uuid="6b58a2df-d673-4a03-a898-67b2addd2e34"/>
+			</line>
+			<line>
+				<reportElement x="415" y="0" width="1" height="61" uuid="fc31a3ff-b1e3-4c1b-a35c-afb6eacf512b"/>
+			</line>
+			<staticText>
+				<reportElement x="16" y="22" width="100" height="20" uuid="927e9351-4941-4a84-8bb4-e242cd70b519"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date De Retrait]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="22" width="100" height="20" uuid="c29ce384-2352-496f-b238-284051e4c27a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quantite De Retrait]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="22" width="100" height="20" uuid="ab2306bb-9396-464a-909e-4a3a46783212"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Libelle De L'article]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="437" y="22" width="100" height="20" uuid="01639436-6c18-4bca-977b-aa96d617184c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prenom Du Client]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="61" uuid="ae74ab8e-c9ae-4aa5-801d-c14a9ecc9bee"/>
+			</rectangle>
+			<line>
+				<reportElement x="131" y="0" width="1" height="61" uuid="0b5e2199-aa31-4cd2-874d-45e6ef3c5e69"/>
+			</line>
+			<line>
+				<reportElement x="273" y="0" width="1" height="61" uuid="7759c39e-14ec-457c-ae7a-a428277733ae"/>
+			</line>
+			<line>
+				<reportElement x="415" y="0" width="1" height="61" uuid="cadb99aa-cd40-4a09-86da-7f1a0eb2d402"/>
+			</line>
+			<textField>
+				<reportElement x="16" y="22" width="100" height="20" uuid="93458519-45ba-4e98-aa26-f9b77de74651"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Date_retrait}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="22" width="100" height="20" uuid="e6da6439-e90c-465d-9f85-be8461c554d7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Qt_retrait}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="22" width="100" height="20" uuid="540409ce-ec90-40ba-ae9a-55880a78bb07"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{LibelleA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="437" y="22" width="100" height="20" uuid="caf30180-26d7-4a49-86bb-33fe54a58f8c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Prenom}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

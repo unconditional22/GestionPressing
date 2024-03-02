@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="35530490-b2b7-49c2-8b3a-490fae64be7a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select Designation_tps, LibelleS from type_service ts, service s where ts.IDS=s.IDS;]]>
+	</queryString>
+	<field name="Designation_tps" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LibelleS" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="79" uuid="12a55f44-e533-4d61-aa24-cdeadf08b9b2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="109" y="21" width="332" height="37" uuid="392c4777-eaf5-4cc1-8c8c-9140e3392961"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Categories Des Services]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="61" uuid="f521c0a6-dc2d-4fc0-8d86-116b7e2dd074"/>
+			</rectangle>
+			<line>
+				<reportElement x="277" y="0" width="1" height="61" uuid="fb80ea8c-c217-4105-856b-0b9dfae89756"/>
+			</line>
+			<staticText>
+				<reportElement x="57" y="22" width="155" height="20" uuid="4b61d40d-22d1-4eb6-89cc-7ddebc4bcc57"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Categorie D'un Service]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="22" width="192" height="20" uuid="355f983f-0f65-4b49-81cc-1cc747a35ad2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Libelle D'un Service]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="61" uuid="3790edb4-a95b-4e6b-8f51-083f42059ef5"/>
+			</rectangle>
+			<line>
+				<reportElement x="277" y="0" width="1" height="61" uuid="1fbf56b3-c9d0-4e27-bee0-b6c082e08e9b"/>
+			</line>
+			<textField>
+				<reportElement x="57" y="25" width="155" height="20" uuid="5316b09c-c90a-481b-bc36-37f892367de5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{Designation_tps}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="324" y="25" width="192" height="20" uuid="f1a807a2-4ccc-408d-8705-0cab19dde2c8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{LibelleS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

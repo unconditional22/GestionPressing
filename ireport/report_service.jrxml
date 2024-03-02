@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c5fc3e9a-9802-4778-9150-422d500932da">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from service;]]>
+	</queryString>
+	<field name="IDS" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="LibelleS" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NumS" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PrixUS" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="79" uuid="c5a46a97-fefc-4ebf-a917-635b4b7ecba4"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="147" y="18" width="274" height="42" uuid="a9351e15-c181-4c90-bce4-9ead6f8839dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Liste Des Services]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="61" uuid="56584a6a-0287-443b-a703-d17631d5b01b"/>
+			</rectangle>
+			<line>
+				<reportElement x="173" y="0" width="1" height="61" uuid="9f3fb333-f3d7-4105-84c4-2a540adec77c"/>
+			</line>
+			<line>
+				<reportElement x="377" y="0" width="1" height="61" uuid="280d3b6c-5a8d-4582-aa6f-579b1e2e7eac"/>
+			</line>
+			<staticText>
+				<reportElement x="35" y="22" width="112" height="20" uuid="a58418b7-c5e0-4a9c-b12d-0a192d73d6a6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Libelle Du Service]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="22" width="100" height="20" uuid="f1dfe60e-8334-457f-b45f-cc30eea14696"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Numemo Du Service]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="22" width="127" height="20" uuid="92e716e9-700d-40ba-ad20-ba51384a3ca5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prix Unitaire Du Service]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="61" uuid="4b52fbe6-f3e9-450c-879a-96b3dc87ceea"/>
+			</rectangle>
+			<line>
+				<reportElement x="173" y="0" width="1" height="61" uuid="468d7d71-8bee-4e15-8a2f-0f4593315358"/>
+			</line>
+			<line>
+				<reportElement x="377" y="0" width="1" height="61" uuid="70b39e97-e268-4cd9-8ed1-a7f282941cd0"/>
+			</line>
+			<textField>
+				<reportElement x="37" y="26" width="110" height="20" uuid="c6d558f9-9a5c-4cf6-8247-170d9adb9594"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{LibelleS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="26" width="100" height="20" uuid="4872b8dd-5b73-4ec9-afd5-f722dec6992e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{NumS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="26" width="127" height="20" uuid="608d50fd-4883-4bc2-b418-a9c25ee0fbff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{PrixUS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
